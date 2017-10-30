@@ -1,0 +1,23 @@
+{
+   "name": "niirrty/niirrty.dynprop",
+   "type": "library",
+   "description": "A dynamic PHP class properties library.",
+   "license": "MIT",
+   "config": {
+      "secure-http": false
+   },
+   "authors": [
+      {
+         "name": "Ni Irrty",
+         "email": "niirrty+code@gmail.com"
+      }
+   ],
+   "require": {
+      "php": ">=7.1"
+   },
+   "autoload": {
+      "psr-4": {
+         "Niirrty\\DynProp\\": "src/"
+      }
+   }
+}
