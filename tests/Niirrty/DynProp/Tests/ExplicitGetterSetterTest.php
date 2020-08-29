@@ -19,33 +19,33 @@ class ExplicitGetterSetterTest extends TestCase
 {
 
 
-   public function testSet()
-   {
+    public function testSet()
+    {
 
-      $eg = new ExplicitGetterSetterFixture( 'foo', 123, 'BAZ' );
-      $eg->baz = 12.34;
-      $this->assertSame( 12.34, $eg->getBaz() );
-      $eg->bar = 'Bar';
-      $this->assertSame( 'Bar', $eg->bar );
+        $eg = new ExplicitGetterSetterFixture( 'foo', 123, 'BAZ' );
+        $eg->baz = 12.34;
+        $this->assertSame( 12.34, $eg->getBaz() );
+        $eg->bar = 'Bar';
+        $this->assertSame( 'Bar', $eg->bar );
 
-   }
-   public function test__setException()
-   {
+    }
+    public function test__setException()
+    {
 
-      $eg = new ExplicitGetterSetterFixture( 'foo', 123, 'BAZ' );
-      $this->expectException( \LogicException::class );
-      $eg->foo = 20;
+        $eg = new ExplicitGetterSetterFixture( 'foo', 123, 'BAZ' );
+        $this->expectException( \LogicException::class );
+        $eg->foo = 20;
 
-   }
-   public function testIsset()
-   {
+    }
+    public function testIsset()
+    {
 
-      $eg = new ExplicitGetterSetterFixture( 'foo', 123, 'BAZ' );
-      $this->assertTrue( isset( $eg->foo ) );
-      $this->assertTrue( isset( $eg->bar ) );
-      $this->assertTrue( isset( $eg->baz ) );
+        $eg = new ExplicitGetterSetterFixture( 'foo', 123, 'BAZ' );
+        $this->assertTrue( isset( $eg->foo ) );
+        $this->assertTrue( isset( $eg->bar ) );
+        $this->assertTrue( isset( $eg->baz ) );
 
-   }
+    }
 
 
 }

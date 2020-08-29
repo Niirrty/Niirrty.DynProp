@@ -22,80 +22,80 @@ class ExplicitGetterSetterFixture extends ExplicitGetterSetter
 
 
 
-   /**
-    * …
-    *
-    * @type
-    */
-   private $_foo;
+    /**
+     * …
+     *
+     * @type
+     */
+    private $_foo;
 
-   /**
-    * …
-    *
-    * @type
-    */
-   private $_bar;
+    /**
+     * …
+     *
+     * @type
+     */
+    private $_bar;
 
-   /**
-    * …
-    *
-    * @type
-    */
-   private $_baz;
-
-
-   /**
-    * Init a new ExplicitGetterFixture instance.
-    */
-   public function __construct( $foo, $bar, $baz )
-   {
-
-      $this->_foo = $foo;
-      $this->_bar = $bar;
-      $this->_baz = $baz;
-
-      $this->ignoreGetProperties[] = 'baz';
-      $this->ignoreSetProperties[] = 'foo';
-
-   }
+    /**
+     * …
+     *
+     * @type
+     */
+    private $_baz;
 
 
-   public function getFoo()
-   {
+    /**
+     * Init a new ExplicitGetterFixture instance.
+     */
+    public function __construct( $foo, $bar, $baz )
+    {
 
-      return $this->_foo;
+        $this->_foo = $foo;
+        $this->_bar = $bar;
+        $this->_baz = $baz;
 
-   }
-   public function getBar()
-   {
+        $this->ignoreGetProperties[] = 'baz';
+        $this->ignoreSetProperties[] = 'foo';
 
-      return $this->_bar;
+    }
 
-   }
-   public function getBaz()
-   {
 
-      return $this->_baz;
+    public function getFoo()
+    {
 
-   }
-   public function setFoo( $value )
-   {
+        return $this->_foo;
 
-      $this->_foo = $value;
+    }
+    public function getBar()
+    {
 
-   }
-   public function setBar( $value )
-   {
+        return $this->_bar;
 
-      $this->_bar = $value;
+    }
+    public function getBaz()
+    {
 
-   }
-   public function setBaz( $value )
-   {
+        return $this->_baz;
 
-      $this->_baz = $value;
+    }
+    public function setFoo( $value )
+    {
 
-   }
+        $this->_foo = $value;
+
+    }
+    public function setBar( $value )
+    {
+
+        $this->_bar = $value;
+
+    }
+    public function setBaz( $value )
+    {
+
+        $this->_baz = $value;
+
+    }
 
 }
 

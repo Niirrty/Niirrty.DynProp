@@ -22,61 +22,61 @@ class ExplicitGetterFixture extends ExplicitGetter
 
 
 
-   /**
-    * …
-    *
-    * @type
-    */
-   private $_foo;
+    /**
+     * …
+     *
+     * @type
+     */
+    private $_foo;
 
-   /**
-    * …
-    *
-    * @type
-    */
-   private $_bar;
+    /**
+     * …
+     *
+     * @type
+     */
+    private $_bar;
 
-   /**
-    * …
-    *
-    * @type
-    */
-   private $_baz;
-
-
-   /**
-    * Init a new ExplicitGetterFixture instance.
-    */
-   public function __construct( $foo, $bar, $baz )
-   {
-
-      $this->_foo = $foo;
-      $this->_bar = $bar;
-      $this->_baz = $baz;
-
-      $this->ignoreGetProperties[] = 'baz';
-
-   }
+    /**
+     * …
+     *
+     * @type
+     */
+    private $_baz;
 
 
-   public function getFoo()
-   {
+    /**
+     * Init a new ExplicitGetterFixture instance.
+     */
+    public function __construct( $foo, $bar, $baz )
+    {
 
-      return $this->_foo;
+        $this->_foo = $foo;
+        $this->_bar = $bar;
+        $this->_baz = $baz;
 
-   }
-   public function getBar()
-   {
+        $this->ignoreGetProperties[] = 'baz';
 
-      return $this->_bar;
+    }
 
-   }
-   public function getBaz()
-   {
 
-      return $this->_baz;
+    public function getFoo()
+    {
 
-   }
+        return $this->_foo;
+
+    }
+    public function getBar()
+    {
+
+        return $this->_bar;
+
+    }
+    public function getBaz()
+    {
+
+        return $this->_baz;
+
+    }
 
 }
 

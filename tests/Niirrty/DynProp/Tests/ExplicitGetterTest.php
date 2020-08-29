@@ -19,31 +19,31 @@ class ExplicitGetterTest extends TestCase
 {
 
 
-   public function testIsset()
-   {
+    public function testIsset()
+    {
 
-      $eg = new ExplicitGetterFixture( 'foo', 123, 'BAZ' );
-      $this->assertTrue( isset( $eg->foo ) );
-      $this->assertTrue( isset( $eg->bar ) );
-      $this->assertFalse( isset( $eg->baz ) );
+        $eg = new ExplicitGetterFixture( 'foo', 123, 'BAZ' );
+        $this->assertTrue( isset( $eg->foo ) );
+        $this->assertTrue( isset( $eg->bar ) );
+        $this->assertFalse( isset( $eg->baz ) );
 
-   }
-   public function test__get()
-   {
+    }
+    public function test__get()
+    {
 
-      $eg = new ExplicitGetterFixture( 'foo', 123, 'BAZ' );
-      $this->assertSame( 'foo', $eg->foo );
-      $this->assertSame( 123, $eg->bar );
+        $eg = new ExplicitGetterFixture( 'foo', 123, 'BAZ' );
+        $this->assertSame( 'foo', $eg->foo );
+        $this->assertSame( 123, $eg->bar );
 
-   }
-   public function test__getException()
-   {
+    }
+    public function test__getException()
+    {
 
-      $eg = new ExplicitGetterFixture( 'foo', 123, 'BAZ' );
-      $this->expectException( \LogicException::class );
-      $eg->baz;
+        $eg = new ExplicitGetterFixture( 'foo', 123, 'BAZ' );
+        $this->expectException( \LogicException::class );
+        $eg->baz;
 
-   }
+    }
 
 
 }
