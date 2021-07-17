@@ -1,10 +1,10 @@
 <?php
 /**
  * @author     Niirrty <niirrty+code@gmail.com>
- * @copyright  © 2017-2020, Niirrty
+ * @copyright  © 2017-2021, Niirrty
  * @package    Niirrty\DynProp
  * @since      2017-10-30
- * @version    0.3.0
+ * @version    0.4.0
  */
 
 
@@ -29,19 +29,19 @@ class ExplicitGetter
 {
 
 
-    // <editor-fold desc="// – – –   P R O T E C T E D   F I E L D S   – – – – – – – – – – – – – – – – – – – – – –">
+    #region // – – –   P R O T E C T E D   F I E L D S   – – – – – – – – – – – – – – – – – – – – – –
 
     /**
      * The names of all get* methods (without the leading get) that should not be mapped as dynamic properties
      *
      * @type  array
      */
-    protected $ignoreGetProperties = [];
+    protected array $ignoreGetProperties = [];
 
-    // </editor-fold>
+    #endregion
 
 
-    // <editor-fold desc="// – – –   P U B L I C   M E T H O D S   – – – – – – – – – – – – – – – – – – – – – – – –">
+    #region // – – –   P U B L I C   M E T H O D S   – – – – – – – – – – – – – – – – – – – – – – – –
 
     /**
      * The magic get method to let you access all getter methods by dynamic properties.
@@ -73,11 +73,12 @@ class ExplicitGetter
     /**
      * Returns, if a property with the defined name exists for read access.
      *
-     * @param  string $name       The name of the property.
-     * @param  string $getterName Returns the name of the associated get method, if method returns TRUE.
+     * @param string      $name       The name of the property.
+     * @param string|null $getterName Returns the name of the associated get method, if method returns TRUE.
+     *
      * @return boolean
      */
-    public function hasReadableProperty( string $name, &$getterName ) : bool
+    public function hasReadableProperty( string $name, ?string &$getterName = null ) : bool
     {
 
         if ( \in_array( $name, $this->ignoreGetProperties ) )
@@ -91,16 +92,16 @@ class ExplicitGetter
 
     }
 
-    // </editor-fold>
+    #endregion
 
 
-    // <editor-fold desc="// – – –   P R O T E C T E D   M E T H O D S   – – – – – – – – – – – – – – – – – – – – –">
+    #region // – – –   P R O T E C T E D   M E T H O D S   – – – – – – – – – – – – – – – – – – – – –
 
     /**
      * @param string $name
      * @return mixed
      */
-    protected function __internalGet( string $name )
+    protected function __internalGet( string $name ): mixed
     {
 
         // The name of the required getMethod
@@ -113,7 +114,7 @@ class ExplicitGetter
 
     }
 
-    // </editor-fold>
+    #endregion
 
 
 }
