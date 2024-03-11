@@ -1,6 +1,6 @@
 # Niirrty.DynProp
 
-This is an PHP7 implementation to easy generate an little bit of "magic" extra functionality to you're PHP classes.
+This is an PHP8 implementation to easy generate a little bit of "magic" extra functionality to you're PHP classes.
 
 ## Installation
 
@@ -9,8 +9,8 @@ inside the `composer.json`:
 ```json
 {
    "require": {
-      "php": ">=7.1",
-      "niirrty/niirrty.dynprop": "~0.1"
+      "php": ">=8.1",
+      "niirrty/niirrty.dynprop": "~0.6"
    }
 }
 ```

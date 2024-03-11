@@ -1,10 +1,9 @@
 <?php
 /**
  * @author     Niirrty <niirrty+code@gmail.com>
- * @copyright  © 2017-2021, Niirrty
+ * @copyright  © 2017-2024, Niirrty
  * @package    Niirrty\DynProp
  * @since      2017-10-30
- * @version    0.4.0
  */
 
 
